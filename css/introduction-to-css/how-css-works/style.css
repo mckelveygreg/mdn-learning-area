@@ -1,4 +1,12 @@
-
+html {
+   font-family: 'Raleway', sans-serif;
+   background-color: aquamarine;
+}
+body {
+    width: 600px;
+    margin: 20px auto;
+    background-color: #FF9500;
+}
 h1 {
   color: blue;
   background-color: yellow;
