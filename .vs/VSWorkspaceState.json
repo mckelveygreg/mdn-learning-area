@@ -1,6 +1,14 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\html",
+    "\\html\\multimedia-and-embedding",
+    "\\html\\multimedia-and-embedding\\mdn-splash-page-finished",
+    "\\html\\multimedia-and-embedding\\mdn-splash-page-start",
+    "\\javascript",
+    "\\javascript\\introduction-to-js-1",
+    "\\javascript\\introduction-to-js-1\\what-is-js"
   ],
+  "SelectedNode": "\\html\\multimedia-and-embedding\\mdn-splash-page-finished\\index.html",
   "PreviewInSolutionExplorer": false
 }

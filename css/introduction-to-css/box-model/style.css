@@ -19,6 +19,8 @@ header, footer {
 
 main {
   background-color: yellow;
+  margin: 30px;
+  padding: 30px;
 }
 
 header {
@@ -26,6 +28,6 @@ header {
 }
 
 footer {
-
+    margin-top: 15px;
 }
 
