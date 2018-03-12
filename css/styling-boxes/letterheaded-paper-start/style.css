@@ -9,6 +9,7 @@ html {
 body {
   margin: 0;
   background: #ccc;
+  
 }
 
 article {
@@ -36,6 +37,15 @@ h1 {
   padding: 44px 0;
   color: white;
   text-shadow: 1px 1px 1px black;
+  background-image: url(logo.png);
+  filter: drop-shadow(3px 3px 3px black);
 }
 
 /* Your CSS below here */
+
+article {
+    background: url(top-image.png) no-repeat left top;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0) 20%, rgba(0,0,0,0) 90%, rgba(0,0,0,0.4)) ,url(top-image.png) no-repeat top, 
+        url(bottom-image.png) no-repeat bottom;
+    background-color: white;
+}
