@@ -1,14 +1,13 @@
 {
   "ExpandedNodes": [
     "",
-    "\\html",
-    "\\html\\multimedia-and-embedding",
-    "\\html\\multimedia-and-embedding\\mdn-splash-page-finished",
     "\\html\\multimedia-and-embedding\\mdn-splash-page-start",
     "\\javascript",
-    "\\javascript\\introduction-to-js-1",
-    "\\javascript\\introduction-to-js-1\\what-is-js"
+    "\\javascript\\oojs",
+    "\\javascript\\oojs\\advanced",
+    "\\javascript\\oojs\\assessment",
+    "\\javascript\\oojs\\bouncing-balls"
   ],
-  "SelectedNode": "\\html\\multimedia-and-embedding\\mdn-splash-page-finished\\index.html",
+  "SelectedNode": "\\javascript\\oojs\\bouncing-balls\\main.js",
   "PreviewInSolutionExplorer": false
 }

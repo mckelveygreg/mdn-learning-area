@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -23,7 +23,10 @@
         document.body.style.backgroundColor = rndCol;
       }
 
-      btn.onclick = bgChange;    
+			window.onkeydown = bgChange;   
+			window.onkeyup = bgChange;
+			btn.onmouseover = bgChange;
+			btn.onmouseout = bgChange;
     </script>
   </body>
 </html>

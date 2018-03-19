@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -10,6 +10,14 @@
   </body>
 
     <script>
-      
+			function Person(name) {
+				this.name = name;
+				this.greeting = function () {
+					alert('Hi! i\'m ' + this.name + '.');
+				};
+			}
+
+			var person1 = new Person('Bob');
+			var person2 = new Person('Becky');
     </script>
 </html>
