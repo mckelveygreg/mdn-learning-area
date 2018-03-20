@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -24,7 +24,22 @@
     </div>
 
     <script>
+			var div = document.querySelector('div');
 
+			var WIDTH = window.innerWidth;
+			var HEIGHT = window.innerHeight;
+
+			div.style.width = WIDTH + 'px';
+			div.style.height = HEIGHT + 'px';
+
+
+			window.onresize = function () {
+				var WIDTH = window.innerWidth;
+				var HEIGHT = window.innerHeight;
+
+				div.style.width = WIDTH + 'px';
+				div.style.height = HEIGHT + 'px';
+			}
     </script>
   </body>
 </html>

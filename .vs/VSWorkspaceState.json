@@ -1,13 +1,13 @@
 {
   "ExpandedNodes": [
     "",
-    "\\html\\multimedia-and-embedding\\mdn-splash-page-start",
     "\\javascript",
-    "\\javascript\\oojs",
+    "\\javascript\\apis",
+    "\\javascript\\apis\\document-manipulation",
     "\\javascript\\oojs\\advanced",
     "\\javascript\\oojs\\assessment",
     "\\javascript\\oojs\\bouncing-balls"
   ],
-  "SelectedNode": "\\javascript\\oojs\\bouncing-balls\\main.js",
+  "SelectedNode": "\\javascript\\apis\\document-manipulation\\shopping-list.html",
   "PreviewInSolutionExplorer": false
 }

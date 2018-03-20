@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -30,7 +30,32 @@
     </ul>
 
     <script>
+			var list = document.querySelector('ul');
+			var item = document.querySelector('input');
+			var button = document.querySelector('button');
 
+			button.onclick = function () {
+				var newItem = item.value;
+				item.value = '';
+
+				var listItem = document.createElement('li');
+				var span = document.createElement('span');
+				var deleteButton = document.createElement('button');
+
+				listItem.appendChild(span);
+				listItem.appendChild(deleteButton);
+
+				span.textContent = newItem;
+				deleteButton.textContent = 'Delete';
+
+				list.appendChild(listItem);
+
+				deleteButton.onclick = function () {
+					listItem.parentNode.removeChild(listItem);
+				}
+
+				item.focus();
+			}
     </script>
   </body>
 </html>
