@@ -3,11 +3,10 @@
     "",
     "\\javascript",
     "\\javascript\\apis",
-    "\\javascript\\apis\\fetching-data\\can-store",
-    "\\javascript\\apis\\fetching-data\\can-store-xhr",
-    "\\javascript\\apis\\third-party-apis",
-    "\\javascript\\apis\\third-party-apis\\google-maps"
+    "\\javascript\\apis\\drawing-graphics",
+    "\\javascript\\apis\\drawing-graphics\\getting-started",
+    "\\javascript\\apis\\third-party-apis\\youtube"
   ],
-  "SelectedNode": "\\javascript\\apis\\third-party-apis\\google-maps\\maps_start.html",
+  "SelectedNode": "\\javascript\\apis\\drawing-graphics\\getting-started\\1_canvas_template.html",
   "PreviewInSolutionExplorer": false
 }
