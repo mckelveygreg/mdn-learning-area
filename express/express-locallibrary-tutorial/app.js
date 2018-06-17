@@ -1,5 +1,13 @@
 var createError = require('http-errors');
 var express = require('express');
+
+//Set up mongoose connection
+var mongoose = require('mongoose');
+var mongoDB = 'mongodb://admin:password1@ds018238.mlab.com:18238/local_library';
+mongoose.connect(mongoDB);
+mongoose.Promise = global.Promise;
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
