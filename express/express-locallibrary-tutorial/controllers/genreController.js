@@ -1,6 +1,8 @@
 var Genre = require('../models/genre');
 var Book = require('../models/book')
 var async = require('async');
+const { body,validationResult } = require('express-validator/check');
+const { sanitizeBody } = require('express-validator/filter');
 
 // Display list of all genres.
 exports.genre_list = function(req, res) {
@@ -40,13 +42,52 @@ exports.genre_detail = function(req, res, next) {
 
 // Display Auhor create form on GET
 exports.genre_create_get = function(req, res) {
-    res.send('NOT IMPLEMENTED: genre create GET');
+    res.render('genre_form', {title: 'Create Genre' });
 };
 
 // Handle genre create on POST.
-exports.genre_create_post = function(req, res) {
-    res.send('NOT IMPLEMENTED: genre create POST');
-};
+exports.genre_create_post = [
+    // Validate that the name field is not empy.
+    body('name', 'Genre name required').isLength({ min: 1 }).trim(),
+
+    //Sanitize (trim and excape) the name field.
+    sanitizeBody('name').trim().escape(),
+
+    // Process request after validation and sanitazation.
+    (req, res, next) => {
+        // Extract the validation errors from a request.
+        const errors = validationResult(req);
+        // Create a genre object with escaped and trimmed data.
+        var genre = new Genre(
+            { name: req.body.name }
+        );
+
+        if (!errors.isEmpty()) {
+            // There are errors. Render the form again with sanitized values/error messages.
+           res.render('genre_form', { title: 'Create Genre', genre: genre, errors: errors.array()});
+           return; 
+        }
+        else {
+            // Data from form is valid.
+            // Check if Genre wit hthe same name already exists.
+            Genre.findOne({ 'name': req.body.name })
+                .exec( function(err, found_genre) {
+                    if (err) {return next(err); }
+                    if (found_genre) {
+                        // Genre exists, redirect to its detail page.
+                        res.redirect(found_genre.url);
+                    }
+                    else {
+                        genre.save(function (err) {
+                            if (err) { return next(err); }
+                            // Genre saved. Redirect to genre detail page.
+                            res.redirect(genre.url);
+                        });
+                    }
+                });
+        }
+    }
+];
 
 // Display genre delete form on GET.
 exports.genre_delete_get = function(req, res) {
