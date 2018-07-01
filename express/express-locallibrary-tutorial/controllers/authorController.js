@@ -149,11 +149,11 @@ exports.author_update_get = function(req, res, next) {
     Author.findById(req.params.id, function (err, author) {
         if (err) { return next(err); }
         if (author == null ) { //no results 
-        var err = new Error('Author not found');
-        err.status = 404;
-        return next(err);
-    }
-    res.render('author_form', { title: 'Update Author', author: author});
+            var err = new Error('Author not found');
+            err.status = 404;
+            return next(err);
+        }   
+        res.render('author_form', { title: 'Update Author', author: author});
     });
 };
 
