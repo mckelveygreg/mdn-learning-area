@@ -1,5 +1,6 @@
 var createError = require('http-errors');
 var express = require('express');
+var compression = require('compression');
 
 //Set up mongoose connection
 var mongoose = require('mongoose');
@@ -17,7 +18,8 @@ var usersRouter = require('./routes/users');
 var catalogRouter = require('./routes/catalog'); // imports routes from "catalog" area of site
 
 var app = express();
-
+// compress all routes
+app.use(compression());
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
