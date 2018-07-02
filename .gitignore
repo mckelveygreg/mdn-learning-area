@@ -1,0 +1,10 @@
+# For Express Local Library deployment
+
+# ignore everything
+/*
+
+# files not to ignore
+!/.gitignore
+
+# folder not to ignore
+!/express/express-locallibrary-tutorial
